@@ -4,13 +4,13 @@ import com.etiya.rentACar.business.abstracts.BrandService;
 import com.etiya.rentACar.business.dtos.requests.CreateBrandRequest;
 import com.etiya.rentACar.business.dtos.responses.brands.CreatedBrandResponse;
 import com.etiya.rentACar.business.dtos.responses.brands.GetListBrandResponse;
+import com.etiya.rentACar.core.exceptions.types.BusinessException;
 import com.etiya.rentACar.core.utilities.mapping.ModelMapperService;
 import com.etiya.rentACar.dataAccess.abstracts.BrandRepository;
 import com.etiya.rentACar.entities.Brand;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,7 +23,7 @@ public class BrandManager implements BrandService {
     @Override
     public CreatedBrandResponse add(CreateBrandRequest createBrandRequest) {
         //todo : Business rules
-
+         checkIfBrandNameExists(createBrandRequest.getName());
         //mapping
 //        Brand brand = new Brand();
 //        brand.setName(createBrandRequest.getName());
@@ -57,7 +57,32 @@ public class BrandManager implements BrandService {
         }
         return  getListBrandResponses;
     }
+
+    @Override
+    public List<GetListBrandResponse> getByName(String name) {
+        List<Brand> brands = brandRepository.findByName(name);
+        List<GetListBrandResponse> getListBrandResponses = new ArrayList<>();
+        for(Brand brand:brands){
+            GetListBrandResponse response = new GetListBrandResponse();
+            response.setId(brand.getId());
+            response.setName(brand.getName());
+            getListBrandResponses.add(response);
+        }
+        return  getListBrandResponses;
+    }
+
+    private void checkIfBrandNameExists(String name){
+
+        Brand brand = brandRepository.findByNameIgnoreCase(name.trim());
+        //audi,mercedes "audi"
+        if(brand!=null){
+            throw new BusinessException("Böyle bir marka daha önce eklendi");
+        }
+    }
+
 }
+
+
 //Tüm entityler için Add,Update,Delete, GetAll,GetById operasyonlarını uçtan uca yazınız.
 //tamamında response-request pattern uygulanmalı
 

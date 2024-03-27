@@ -29,4 +29,11 @@ public class BrandsController {
     public List<GetListBrandResponse> getList(){
         return brandService.getList();
     }
+
+
+    @GetMapping("{name}")
+    @ResponseStatus(HttpStatus.OK)
+    public List<GetListBrandResponse> getByName(String name){
+        return brandService.getByName(name);
+    }
 }

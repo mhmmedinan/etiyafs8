@@ -9,4 +9,6 @@ import java.util.List;
 public interface BrandService {
     CreatedBrandResponse add(CreateBrandRequest brand);
     List<GetListBrandResponse> getList();
+
+    List<GetListBrandResponse> getByName(String name);
 }
