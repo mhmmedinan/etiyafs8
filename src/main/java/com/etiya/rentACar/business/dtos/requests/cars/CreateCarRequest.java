@@ -1,4 +1,4 @@
-package com.etiya.rentACar.business.dtos.requests;
+package com.etiya.rentACar.business.dtos.requests.cars;
 
 import jakarta.persistence.Column;
 import lombok.AllArgsConstructor;

@@ -1,8 +1,8 @@
 package com.etiya.rentACar.business.concretes;
 
 import com.etiya.rentACar.business.abstracts.ModelService;
-import com.etiya.rentACar.business.dtos.requests.CreateModelRequest;
-import com.etiya.rentACar.business.dtos.requests.UpdateModelRequest;
+import com.etiya.rentACar.business.dtos.requests.models.CreateModelRequest;
+import com.etiya.rentACar.business.dtos.requests.models.UpdateModelRequest;
 import com.etiya.rentACar.business.dtos.responses.models.CreatedModelResponse;
 import com.etiya.rentACar.business.dtos.responses.models.GetListModelResponse;
 import com.etiya.rentACar.business.dtos.responses.models.UpdatedModelResponse;

@@ -1,7 +1,7 @@
 package com.etiya.rentACar.api.controllers;
 
 import com.etiya.rentACar.business.abstracts.TransmissionService;
-import com.etiya.rentACar.business.dtos.requests.CreateTransmissionRequest;
+import com.etiya.rentACar.business.dtos.requests.transmissions.CreateTransmissionRequest;
 import com.etiya.rentACar.business.dtos.responses.transmissions.CreatedTransmissionResponse;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;

@@ -1,4 +1,4 @@
-package com.etiya.rentACar.business.dtos.requests;
+package com.etiya.rentACar.business.dtos.requests.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

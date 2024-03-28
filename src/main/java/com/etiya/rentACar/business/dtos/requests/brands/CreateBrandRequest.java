@@ -1,4 +1,4 @@
-package com.etiya.rentACar.business.dtos.requests;
+package com.etiya.rentACar.business.dtos.requests.brands;
 
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;

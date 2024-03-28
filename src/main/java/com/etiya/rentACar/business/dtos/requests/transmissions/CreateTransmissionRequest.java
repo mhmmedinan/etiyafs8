@@ -1,4 +1,4 @@
-package com.etiya.rentACar.business.dtos.requests;
+package com.etiya.rentACar.business.dtos.requests.transmissions;
 
 import com.etiya.rentACar.entities.Brand;
 import jakarta.persistence.Column;

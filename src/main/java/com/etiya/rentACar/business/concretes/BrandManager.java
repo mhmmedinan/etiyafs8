@@ -1,7 +1,7 @@
 package com.etiya.rentACar.business.concretes;
 
 import com.etiya.rentACar.business.abstracts.BrandService;
-import com.etiya.rentACar.business.dtos.requests.CreateBrandRequest;
+import com.etiya.rentACar.business.dtos.requests.brands.CreateBrandRequest;
 import com.etiya.rentACar.business.dtos.responses.brands.CreatedBrandResponse;
 import com.etiya.rentACar.business.dtos.responses.brands.GetListBrandResponse;
 import com.etiya.rentACar.core.exceptions.types.BusinessException;

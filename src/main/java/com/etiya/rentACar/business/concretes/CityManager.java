@@ -1,7 +1,7 @@
 package com.etiya.rentACar.business.concretes;
 
 import com.etiya.rentACar.business.abstracts.CityService;
-import com.etiya.rentACar.business.dtos.requests.CreateCityRequest;
+import com.etiya.rentACar.business.dtos.requests.cities.CreateCityRequest;
 import com.etiya.rentACar.business.dtos.responses.cities.CreatedCityResponse;
 import com.etiya.rentACar.core.utilities.mapping.ModelMapperService;
 import com.etiya.rentACar.dataAccess.abstracts.CityRepository;

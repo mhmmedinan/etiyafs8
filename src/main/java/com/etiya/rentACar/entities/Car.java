@@ -6,6 +6,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
@@ -21,6 +23,9 @@ public class Car extends BaseEntity {
     @Column(name="dailyPrice")
     private double dailyPrice;
 
+    @Column(name = "kilometer")
+    private int kilometer;
+
     @ManyToOne
     @JoinColumn(name = "rentalBranchId")
     private RentalBranch rentalBranch;
@@ -28,4 +33,7 @@ public class Car extends BaseEntity {
     @ManyToOne()
     @JoinColumn(name="model_id")
     private Model model; //1
+
+    @OneToMany(mappedBy = "car")
+    private List<Rental> rentals;
 }

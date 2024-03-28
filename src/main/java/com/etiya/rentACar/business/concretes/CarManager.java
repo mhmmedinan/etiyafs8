@@ -1,7 +1,7 @@
 package com.etiya.rentACar.business.concretes;
 
 import com.etiya.rentACar.business.abstracts.CarService;
-import com.etiya.rentACar.business.dtos.requests.CreateCarRequest;
+import com.etiya.rentACar.business.dtos.requests.cars.CreateCarRequest;
 import com.etiya.rentACar.business.dtos.responses.cars.CreatedCarResponse;
 import com.etiya.rentACar.business.dtos.responses.cars.GetListCarResponse;
 import com.etiya.rentACar.core.utilities.mapping.ModelMapperService;
@@ -36,5 +36,20 @@ public class CarManager implements CarService {
                 car->modelMapperService.forResponse().map(car,GetListCarResponse.class)
         ).collect(Collectors.toList());
         return responses;
+    }
+
+    @Override
+    public GetListCarResponse getByCarId(int id) {
+        Car car = carRepository.findById(id).get();
+        GetListCarResponse response =
+                modelMapperService.forResponse().map(car,GetListCarResponse.class);
+        return response;
+    }
+
+    @Override
+    public void updateCarState(int carId, int state) {
+        Car car = carRepository.findById(carId).get();
+        car.setState(state);
+        carRepository.save(car);
     }
 }

@@ -1,7 +1,7 @@
 package com.etiya.rentACar.api.controllers;
 
 import com.etiya.rentACar.business.abstracts.CityService;
-import com.etiya.rentACar.business.dtos.requests.CreateCityRequest;
+import com.etiya.rentACar.business.dtos.requests.cities.CreateCityRequest;
 import com.etiya.rentACar.business.dtos.responses.cities.CreatedCityResponse;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;

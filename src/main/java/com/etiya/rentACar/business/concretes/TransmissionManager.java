@@ -1,7 +1,7 @@
 package com.etiya.rentACar.business.concretes;
 
 import com.etiya.rentACar.business.abstracts.TransmissionService;
-import com.etiya.rentACar.business.dtos.requests.CreateTransmissionRequest;
+import com.etiya.rentACar.business.dtos.requests.transmissions.CreateTransmissionRequest;
 import com.etiya.rentACar.business.dtos.responses.transmissions.CreatedTransmissionResponse;
 import com.etiya.rentACar.core.utilities.mapping.ModelMapperService;
 import com.etiya.rentACar.dataAccess.abstracts.TransmissionRepository;

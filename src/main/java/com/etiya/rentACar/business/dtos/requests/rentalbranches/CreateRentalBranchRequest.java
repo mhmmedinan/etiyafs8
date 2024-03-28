@@ -1,4 +1,4 @@
-package com.etiya.rentACar.business.dtos.requests;
+package com.etiya.rentACar.business.dtos.requests.rentalbranches;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,7 +7,6 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class CreateFuelRequest {
-
-    private String name;
+public class CreateRentalBranchRequest {
+    private int cityId;
 }

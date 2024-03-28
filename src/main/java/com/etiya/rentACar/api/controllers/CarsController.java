@@ -1,7 +1,7 @@
 package com.etiya.rentACar.api.controllers;
 
 import com.etiya.rentACar.business.abstracts.CarService;
-import com.etiya.rentACar.business.dtos.requests.CreateCarRequest;
+import com.etiya.rentACar.business.dtos.requests.cars.CreateCarRequest;
 import com.etiya.rentACar.business.dtos.responses.cars.CreatedCarResponse;
 import com.etiya.rentACar.business.dtos.responses.cars.GetListCarResponse;
 import lombok.AllArgsConstructor;
