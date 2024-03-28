@@ -40,5 +40,9 @@ public class GlobalExceptionHandler {
         return validationProblemDetails;
     }
 }
+//internalservererror => exception,problemdetails,handleException
+//exception türlerini araştırın.
+//500 internal server error
+//=> data integrity violation
 
 

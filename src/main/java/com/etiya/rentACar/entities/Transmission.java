@@ -24,3 +24,14 @@ public class Transmission extends BaseEntity {
     private List<Model> models;
 }
 
+//RentalBranch => city,car
+//City => ankara,
+//Rental ==> customerId,rentalbranchid
+//customer
+//user => firstname,lastname,email,password
+//id 1 olan bir araç kiralandıysa state durumu değişsin.
+//id 2 olan bir araç kiralandı.
+// id si 3 olan aracı kiralarken eski aracın tekrar state durumunun available olması gerekiyor.
+
+
+

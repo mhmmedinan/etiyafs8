@@ -20,6 +20,11 @@ public class Car extends BaseEntity {
     private int state;
     @Column(name="dailyPrice")
     private double dailyPrice;
+
+    @ManyToOne
+    @JoinColumn(name = "rentalBranchId")
+    private RentalBranch rentalBranch;
+
     @ManyToOne()
     @JoinColumn(name="model_id")
     private Model model; //1
